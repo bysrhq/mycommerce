@@ -1,0 +1,21 @@
+#Notes
+
+##Connect to remote repository from Windows with SSH which key generated from PuTTYGen
+
+If you are a Windows user, it means you doesn't have ssh generator.
+Unfortunately if use populare ssh generator like PuTTYGen,
+you will be prompted for phasphrase and it never get delivered any repositories.
+This is actually bug in OpenSHH as follow this link [1].
+
+For fix this issue, you need to convert PuTTYGen format key to OpenSHH key
+which in turns out can leverage remote repository with ssh protocol
+as follow these procedure:
+
+Open PuttyGen
+Click Load
+Load your private key
+Go to Conversions->Export OpenSSH and export your private key
+Copy your private key to ~/.ssh/id_rsa
+
+2017, Written by @bysrhq
+PT. Bank BTPN, Tbk.
